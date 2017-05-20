@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>마인히어로</title>
+<link rel="stylesheet" type="text/css" href="css/minehero.css">
+</head>
+<body>
+
+
+
+    <div class="wrap">
+        <h1 class="blind">마인 히어로 사전등록 이벤트</h1>
+        <!-- 상단 탭 -->
+        <ul id="fix_menu" class="fix_menu">
+            <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+            <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+            <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+        </ul>
+        <!-- //상단 탭 -->
+        
+        <!-- 사전 등록 section -->
+        <section data-anchor="firstPage" class="section spot fp-auto-height">
+            <div class="spot_content">
+            
+            </div>
+        </section>
+        <!-- //사전 등록 section -->
+        
+        
+        <section data-anchor="secondPage" class="section info2">
+            <div class="spot_content">
+            
+            </div>  
+        </section>
+
+        <section data-anchor="thirdPage" class="section info3">
+            
+        </section>
+
+        
+
+
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.wrap').fullpage({
+                scrollingSpeed: 700,
+                scrollBar: true,
+                fitToSection :true,
+                bigSectionsDestination: top,
+                menu: true,
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	           menu: '#fix_menu',
+               css3: true,
+            });
+        });
+    </script>
+
+</body>
+</html>
