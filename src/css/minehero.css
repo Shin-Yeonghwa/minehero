@@ -84,6 +84,15 @@ strong, h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
+.blind {
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+}
+
 /* mixin */
 /* onepage-scroll */
 section {
@@ -118,6 +127,64 @@ section {
   width: 100%;
   height: 128px;
   background: url(../img/bg_nav.png) repeat-x;
+}
+
+.fix_menu ul {
+  overflow: hidden;
+  width: 1284px;
+  padding-left: 178px;
+  margin: 12px auto;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.fix_menu li {
+  float: left;
+  margin-right: 14px;
+}
+
+.fix_menu li a {
+  overflow: hidden;
+  display: block;
+  width: 245px;
+  height: 95px;
+  background: url(../img/sp_minehero.png) no-repeat 0 0;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.fix_menu li a.link_first {
+  background-position: 0 0;
+}
+
+.fix_menu li a.link_second {
+  background-position: -260px 0;
+}
+
+.fix_menu li a.link_third {
+  background-position: -520px 0;
+}
+
+.fix_menu li.active a.link_first {
+  background-position: 0 -100px;
+}
+
+.fix_menu li.active a.link_second {
+  background-position: -260px -100px;
+}
+
+.fix_menu li.active a.link_third {
+  background-position: -520px -100px;
+}
+
+.fix_menu .link_cafe {
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  width: 277px;
+  height: 75px;
+  margin-left: 361px;
+  background: url(../img/sp_minehero.png) no-repeat -809px 0;
 }
 
 .spot {

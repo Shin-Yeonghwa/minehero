@@ -18,7 +18,7 @@ button{border:0;background:none;-webkit-appearance:none}
 input,textarea,select{background:none;-webkit-appearance:none}
 html,body{overflow:hidden; height:100%}
 strong,h1,h2,h3,h4,h5{font-weight:600}
-
+.blind{overflow:hidden !important;position:absolute !important;clip:rect(0 0 0 0) !important;width:1px !important;height:1px !important;margin:-1px !important}
 /* mixin */
 @import "../scss_mixin/mixin";
 
@@ -51,8 +51,57 @@ section{
     top:0;
     right:0;
     width:100%;
+    
     height:128px;
     background:url(../img/bg_nav.png) repeat-x;
+    ul{
+        overflow:hidden;
+        width:1284px;
+        padding-left:178px;
+        margin:12px auto; 
+        @include mx-box-sizing;
+    }
+    li{
+        float:left;
+        margin-right:14px;
+        a{
+            overflow:hidden;
+            display:block;
+            width:245px;
+            height:95px;
+            @include mx-bg(0,0);
+            color:transparent;
+            white-space:nowrap;
+            &.link_first{
+                background-position:0 0;
+            }
+            &.link_second{
+                background-position:-260px 0;
+            }
+            &.link_third{
+                background-position:-520px 0;
+            }
+        }
+        &.active a.link_first{
+            background-position:0 -100px;
+        }
+        &.active a.link_second{
+            background-position:-260px -100px;
+        }
+        &.active a.link_third{
+            background-position:-520px -100px;
+        }
+    }
+    .link_cafe{
+        position:absolute;
+        top:21px;
+        left:50%;
+        width:277px;
+        height:75px;
+        margin-left:361px;
+        @include mx-bg(-809px,0);
+    }
+        
 }
 .spot{
     width:100%;

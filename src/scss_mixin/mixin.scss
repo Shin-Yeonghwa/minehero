@@ -5,23 +5,11 @@
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
 }
-@mixin mx-bg{
-    background:url(../im/sp_ico_titicaca.png) no-repeat;
-    background-size:60px 350px;
-    -webkit-background-size:60px 350px;
+
+@mixin mx-bg($x-position,$y-position){
+    background:url(../img/sp_minehero.png) no-repeat $x-position $y-position;
 }
 
-@mixin mx-bg-intro($x-position,$y-position){
-    background:url(../intro_im/sp_titicaca_intro.png) no-repeat $x-position $y-position;
-    background-size:150px 150px;
-    -webkit-background-size:150px 150px;
-}
-
-@mixin mx-bg-intro-mobile($x-position,$y-position){
-    background:url(../intro_im/sp_titicaca_intro_mobile.png) no-repeat $x-position $y-position;
-    background-size:150px 150px;
-    -webkit-background-size:150px 150px;
-}
 
 @mixin mx-sf{
     font-family:-apple-system,BlinkMacSystemFont,HelveticaNeue,AppleSDGothicNeo-Regular,sans-serif;
