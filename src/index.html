@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
 <title>마인히어로</title>
 <link rel="stylesheet" type="text/css" href="css/minehero.css">
 </head>
@@ -21,7 +21,9 @@
             <li data-menuanchor="thirdPage"><a href="#thirdPage" class="link_third">Third section</a></li>
             </ul>
             <a href="#" class="link_cafe">
-                <span class="blind">공식가페</span>
+                <span class="link">
+                    <span class="blind">공식가페</span>
+                </span>
                 <p class="layer"><span class="blind">가입시 클레오파트라 지급</span></p>
             </a>
         </div>
@@ -29,9 +31,42 @@
         <!-- //상단 탭 -->
         
         <!-- 사전 등록 section -->
-        <section data-anchor="firstPage" class="section spot fp-auto-height">
+        <section data-anchor="firstPage" class="section fp-auto-height spot_section">
             <div class="spot_content">
-            
+                <div class="area_title">
+                    <h1 class="blind">마인히어로</h1>
+                    <strong class="blind">작은 영웅들의 커다란 이야기!</strong>
+                </div>
+                <!-- [D] video 영역 -->
+                <div class="area_video">
+                    <!-- Video -->
+                    <div>    
+                    </div>
+                    <!-- Video -->
+                    <span class="btn_play"></span>
+                </div>
+                <!-- //[D] video 영역 -->
+                <form>
+                    <div class="area_select">
+                        <!-- [D] google 선택시 class="google"
+                                 ios 선택시 class="ios"
+                                 onestore 선책시 class="onestore"
+                                추가해주세요 -->
+
+                        <a href="#a" class="btn_store google">
+                            <span class="text">google</span>
+                            <!--
+                            <span class="text">ios</span>
+                            <span class="text">onestore</span>
+                            -->
+                        </a>
+                        <!-- [D] 셀렉트박스 -->
+                        <ul class="layer_select" style="display:none">
+                            <li><a href="#" class="btn_ios"><span class="text">ios</span></a></li>
+                            <li><a href="#" class="btn_onestore"><span class="text">onestore</span></a></li>
+                        </ul>
+                    </div>    
+                </form>
             </div>
         </section>
         <!-- //사전 등록 section -->
@@ -58,14 +93,19 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('.wrap').fullpage({
-                scrollingSpeed: 700,
+                autoScrolling: true,
+                scrollingSpeed: 500,
                 scrollBar: true,
                 fitToSection :true,
-                bigSectionsDestination: top,
+                bigSectionsDestination: null,
                 menu: true,
                 anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-	           menu: '#fix_menu',
-               css3: true,
+	            menu: '#fix_menu',
+                css3: true,
+                scrollOverflowReset:true,
+            });
+            $('.btn_store').click(function() {
+                $('.layer_select').toggle();
             });
         });
     </script>

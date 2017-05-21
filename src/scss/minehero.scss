@@ -22,6 +22,10 @@ strong,h1,h2,h3,h4,h5{font-weight:600}
 /* mixin */
 @import "../scss_mixin/mixin";
 
+.wrap{
+    height:100%;
+}
+
 /* onepage-scroll */
 section{
     display:table;
@@ -30,11 +34,6 @@ section{
     table-layout:fixed;
     @include mx-box-sizing;
 }
-
-.wrap{
-    height:100%;
-}
-
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell{
@@ -45,7 +44,7 @@ section{
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
 }
-
+/* 상단 GNB */
 .fix_menu{
     position:fixed;
     top:0;
@@ -96,14 +95,33 @@ section{
         position:absolute;
         top:21px;
         left:50%;
-        width:277px;
-        height:75px;
         margin-left:361px;
-        @include mx-bg(-809px,0);
+        .link{
+            display:block;
+            width:277px;
+            height:75px;
+            @include mx-bg(-809px,0);
+        }
+        .layer{
+            display:none;
+        }
+        &:hover{
+            .layer{
+                position:absolute;
+                display:block;
+                top:62px;
+                left:11px;
+                width:258px;
+                height:128px;
+                @include mx-bg(-809px,-100px);
+            }
+        }
     }
         
 }
-.spot{
+
+/* 사전등록 section */
+.spot_section{
     width:100%;
     background:url(../img/bg_sopt.jpg) no-repeat 50% 0%;
     .spot_content{
@@ -111,8 +129,107 @@ section{
         width:1284px;
         min-height:1037px;
         margin:0 auto;
+        text-align:center;
     }
-        
+    .area_title{
+        display:inline-block;
+        width:733px;
+        height:251px;
+        margin-top:154px;
+        background:url(../img/bg_spot_title.png) no-repeat;
+    }    
+    .area_video{
+        position:relative;
+        width:683px;
+        height:392px;
+        margin:9px auto 0;
+        background:url(../img/bg_spot_video.png) no-repeat;
+        .btn_play{
+            position:absolute;
+            top:124px;
+            left:302px;
+            width:93px;
+            height:93px;
+            @include mx-bg(0,-207px);
+        }
+    }
+    .area_select{
+        position:absolute;
+        top:777px;
+        left:336px;
+        .btn_store{
+            overflow:hidden;
+            display:block;
+            width:172px;
+            height:67px;
+            @include mx-bg(-101px,-207px);
+            .text{
+                display:block;
+                overflow:hidden;
+                white-space:nowrap;
+                color:transparent;
+            }
+            &.google{
+                .text{
+                    width:88px;
+                    height:26px;
+                    margin:20px 0 0 27px;
+                    @include mx-bg(-280px,-207px);
+                }
+            }
+            &.ios{
+                .text{
+                    width:34px;
+                    height:22px;
+                    margin:20px 0 0 60px;
+                    @include mx-bg(-281px,-244px);
+                }
+            }
+            &.onestore{
+                .text{
+                    width:93px;
+                    height:19px;
+                    margin:20px 0 0 27px;
+                    @include mx-bg(-280px,-274px);
+                }
+            }
+        }
+        .layer_select{
+            position:absolute;
+            top:55px;
+            left:8px;
+            width:153px;
+            height:94px;
+            @include mx-box-sizing;
+            border:1px solid #ab8b52;
+            border-width:0 1px;
+            background-color:#fff;
+            a{
+                overflow:hidden;
+                display:block;
+                width:151px;
+                height:47px;
+                border-bottom:1px solid #ab8b52;
+                @include mx-box-sizing;
+                white-space:nowrap;
+                color:transparent;
+                &.btn_ios .text{
+                    display:block;
+                    width:34px;
+                    height:22px;
+                    margin:12px 0 0 60px;
+                    @include mx-bg(-281px,-244px); 
+                }
+                &.btn_onestore .text{
+                    display:block;
+                    width:93px;
+                    height:19px;
+                    margin:12px 0 0 27px;
+                    @include mx-bg(-280px,-274px);
+                }
+            }
+        }
+    }
 }
 
 

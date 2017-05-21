@@ -29,7 +29,7 @@ gulp.task('sass-watch', function () {
   gulp.watch('./src/scss/**/*.scss', ['sass']);
 });
 
-gulp.task('webserver', function() {
+gulp.task('start', function() {
     gulp.watch('./src/scss/**/*.scss', ['sass']);
     gulp.src('src')
         .pipe(webserver({

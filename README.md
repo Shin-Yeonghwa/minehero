@@ -4,5 +4,5 @@ sass 사용
 
 ```
 npm install 
-npm run webserver 
+npm start (webserver,browserSync,sass)
 ```

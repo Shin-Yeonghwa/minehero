@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* common */
 body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, audio, video {
   margin: 0;
@@ -94,6 +95,10 @@ strong, h1, h2, h3, h4, h5 {
 }
 
 /* mixin */
+.wrap {
+  height: 100%;
+}
+
 /* onepage-scroll */
 section {
   display: table;
@@ -102,10 +107,6 @@ section {
   table-layout: fixed;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-.wrap {
-  height: 100%;
 }
 
 .fp-auto-height.fp-section,
@@ -120,6 +121,7 @@ section {
   height: auto !important;
 }
 
+/* 상단 GNB */
 .fix_menu {
   position: fixed;
   top: 0;
@@ -181,22 +183,150 @@ section {
   position: absolute;
   top: 21px;
   left: 50%;
+  margin-left: 361px;
+}
+
+.fix_menu .link_cafe .link {
+  display: block;
   width: 277px;
   height: 75px;
-  margin-left: 361px;
   background: url(../img/sp_minehero.png) no-repeat -809px 0;
 }
 
-.spot {
+.fix_menu .link_cafe .layer {
+  display: none;
+}
+
+.fix_menu .link_cafe:hover .layer {
+  position: absolute;
+  display: block;
+  top: 62px;
+  left: 11px;
+  width: 258px;
+  height: 128px;
+  background: url(../img/sp_minehero.png) no-repeat -809px -100px;
+}
+
+/* 사전등록 section */
+.spot_section {
   width: 100%;
   background: url(../img/bg_sopt.jpg) no-repeat 50% 0%;
 }
 
-.spot .spot_content {
+.spot_section .spot_content {
   position: relative;
   width: 1284px;
   min-height: 1037px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.spot_section .area_title {
+  display: inline-block;
+  width: 733px;
+  height: 251px;
+  margin-top: 154px;
+  background: url(../img/bg_spot_title.png) no-repeat;
+}
+
+.spot_section .area_video {
+  position: relative;
+  width: 683px;
+  height: 392px;
+  margin: 9px auto 0;
+  background: url(../img/bg_spot_video.png) no-repeat;
+}
+
+.spot_section .area_video .btn_play {
+  position: absolute;
+  top: 124px;
+  left: 302px;
+  width: 93px;
+  height: 93px;
+  background: url(../img/sp_minehero.png) no-repeat 0 -207px;
+}
+
+.spot_section .area_select {
+  position: absolute;
+  top: 777px;
+  left: 336px;
+}
+
+.spot_section .area_select .btn_store {
+  overflow: hidden;
+  display: block;
+  width: 172px;
+  height: 67px;
+  background: url(../img/sp_minehero.png) no-repeat -101px -207px;
+}
+
+.spot_section .area_select .btn_store .text {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+}
+
+.spot_section .area_select .btn_store.google .text {
+  width: 88px;
+  height: 26px;
+  margin: 20px 0 0 27px;
+  background: url(../img/sp_minehero.png) no-repeat -280px -207px;
+}
+
+.spot_section .area_select .btn_store.ios .text {
+  width: 34px;
+  height: 22px;
+  margin: 20px 0 0 60px;
+  background: url(../img/sp_minehero.png) no-repeat -281px -244px;
+}
+
+.spot_section .area_select .btn_store.onestore .text {
+  width: 93px;
+  height: 19px;
+  margin: 20px 0 0 27px;
+  background: url(../img/sp_minehero.png) no-repeat -280px -274px;
+}
+
+.spot_section .area_select .layer_select {
+  position: absolute;
+  top: 55px;
+  left: 8px;
+  width: 153px;
+  height: 94px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #ab8b52;
+  border-width: 0 1px;
+  background-color: #fff;
+}
+
+.spot_section .area_select .layer_select a {
+  overflow: hidden;
+  display: block;
+  width: 151px;
+  height: 47px;
+  border-bottom: 1px solid #ab8b52;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  white-space: nowrap;
+  color: transparent;
+}
+
+.spot_section .area_select .layer_select a.btn_ios .text {
+  display: block;
+  width: 34px;
+  height: 22px;
+  margin: 12px 0 0 60px;
+  background: url(../img/sp_minehero.png) no-repeat -281px -244px;
+}
+
+.spot_section .area_select .layer_select a.btn_onestore .text {
+  display: block;
+  width: 93px;
+  height: 19px;
+  margin: 12px 0 0 27px;
+  background: url(../img/sp_minehero.png) no-repeat -280px -274px;
 }
 
 /*# sourceMappingURL=maps/minehero.css.map */
