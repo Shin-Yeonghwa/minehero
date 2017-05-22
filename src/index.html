@@ -2,113 +2,67 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>마인 히어로</title>
+<style type="text/css">
+    /* Reset */
+    html,body{width:100%;height:100%}
+    html{overflow-y:scroll;font-size:10px}
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+    body,h1,h2,h3,h4,input,button{font-family:font-family:'나눔 고딕','Nanum Gothic', Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;color:#383d41}
+    body{background-color:#fff;*word-break:break-all;-ms-word-break:break-all}
+    img,fieldset,iframe{border:0 none}
+    li{list-style:none}
+    input,select,button{vertical-align:middle}
+    img{vertical-align:top}
+    i,em,address{font-style:normal}
+    label,button{cursor:pointer}
+    button{margin:0;padding:0}
+    a{color:#222;text-decoration:none}
+    a:hover{color:#FFB652;text-decoration:underline}
+    button *{position:relative}
+    button img{left:-3px;*left:auto}
+    html:first-child select{height:20px;padding-right:6px}
+    option{padding-right:6px}
+    hr{display:none}
+    legend{*width:0}
+    table{border-collapse:collapse;border-spacing:0}
 
-<title>마인히어로</title>
-<link rel="stylesheet" type="text/css" href="css/minehero.css">
+    h1{background-color:#333;height:50px;color:#fff;font-size:25px;padding:0 20px;font-weight:normal;line-height:50px}
+    .wrap{padding:0 20px 20px;font-size:14px;line-height:1.5em;color:#212121}
+    .wrap h2{padding-bottom:10px;margin:20px 0 10px;font-size:21px;line-height:25px;border-bottom:3px solid #a6a6a6}
+    .wrap ul{margin-left:20px}
+    .wrap li{margin-bottom:5px}
+    .wrap ul a em{color:#888;font-size:11px;margin-left:5px}
+    .wrap ul a:hover em{color:#FFB652}
+    .new{color:red;padding-right:5px;}
+    .all-files {font-size: 20px;padding:15px;margin:10px 0 0 0;}
+
+    .date{margin-left:10px;color:#f00}
+    .date:before{padding-right:3px;font-size:11px;color:#f55;content:'NEW 수정날짜 : '}
+    .history{margin-left:10px;color:dodgerblue}
+    .history:before{padding-right:3px;font-size:11px;color:dodgerblue;content:'수정이력 : '}
+    .done{margin-left:10px;color:#389400}
+    .done:before{padding-right:3px;font-size:11px;color:#389400;content:'완료'}
+    .ing{margin-left:10px;color:#0288d1 }
+    .ing:before{padding-right:3px;font-size:11px;color:#0288d1 ;content:'작업중'}
+    .commit-log{font-size:12px;margin-left:10px;color:#555;text-decoration:underline}
+    </style>
+
 </head>
 <body>
-
-
-
-    <div class="wrap">
-        <h1 class="blind">마인 히어로 사전등록 이벤트</h1>
-        <!-- 상단 탭 -->
-        <div id="fix_menu" class="fix_menu">
-            <ul>
-            <li data-menuanchor="firstPage" class="active"><a href="#firstPage" class="link_first">First section</a></li>
-            <li data-menuanchor="secondPage"><a href="#secondPage" class="link_second">Second section</a></li>
-            <li data-menuanchor="thirdPage"><a href="#thirdPage" class="link_third">Third section</a></li>
-            </ul>
-            <a href="#" class="link_cafe">
-                <span class="link">
-                    <span class="blind">공식가페</span>
-                </span>
-                <p class="layer"><span class="blind">가입시 클레오파트라 지급</span></p>
-            </a>
-        </div>
-        
-        <!-- //상단 탭 -->
-        
-        <!-- 사전 등록 section -->
-        <section data-anchor="firstPage" class="section fp-auto-height spot_section">
-            <div class="spot_content">
-                <div class="area_title">
-                    <h1 class="blind">마인히어로</h1>
-                    <strong class="blind">작은 영웅들의 커다란 이야기!</strong>
-                </div>
-                <!-- [D] video 영역 -->
-                <div class="area_video">
-                    <!-- Video -->
-                    <div>    
-                    </div>
-                    <!-- Video -->
-                    <span class="btn_play"></span>
-                </div>
-                <!-- //[D] video 영역 -->
-                <form>
-                    <div class="area_select">
-                        <!-- [D] google 선택시 class="google"
-                                 ios 선택시 class="ios"
-                                 onestore 선책시 class="onestore"
-                                추가해주세요 -->
-
-                        <a href="#a" class="btn_store google">
-                            <span class="text">google</span>
-                            <!--
-                            <span class="text">ios</span>
-                            <span class="text">onestore</span>
-                            -->
-                        </a>
-                        <!-- [D] 셀렉트박스 -->
-                        <ul class="layer_select" style="display:none">
-                            <li><a href="#" class="btn_ios"><span class="text">ios</span></a></li>
-                            <li><a href="#" class="btn_onestore"><span class="text">onestore</span></a></li>
-                        </ul>
-                    </div>    
-                </form>
-            </div>
-        </section>
-        <!-- //사전 등록 section -->
-        
-        
-        <section data-anchor="secondPage" class="section info2">
-            <div class="spot_content">
-            
-            </div>  
-        </section>
-
-        <section data-anchor="thirdPage" class="section info3">
-            
-        </section>
-
-        
-
-
-    </div>
-
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.wrap').fullpage({
-                autoScrolling: true,
-                scrollingSpeed: 500,
-                scrollBar: true,
-                fitToSection :true,
-                bigSectionsDestination: null,
-                menu: true,
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-	            menu: '#fix_menu',
-                css3: true,
-                scrollOverflowReset:true,
-            });
-            $('.btn_store').click(function() {
-                $('.layer_select').toggle();
-            });
-        });
-    </script>
-
+<h1>Index</h1>
+<!--
+<a href="../../dist.tar" class="all-files">html 압축파일 받기 링크</a>
+-->
+<div class="wrap">
+    <h2>파일</h2>
+    <ul>
+        <li><a href="00_event.html">이벤트 메인</a></li>
+        <li><a href="01_event_pop.html">이벤트 메인 - 사전예약 중복 팝업</a></li>
+        <li><a href="01_event_pop2.html">이벤트 메인- 사전예약 완료 팝업1</a></li>
+        <li><a href="01_event_pop3.html">이벤트 메인- 사전예약 완료 팝업2</a></li>
+    </ul>
+</div>
 </body>
 </html>
