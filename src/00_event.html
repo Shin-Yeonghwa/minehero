@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>마인히어로</title>
 <link rel="stylesheet" type="text/css" href="css/minehero.css">
 </head>
@@ -86,7 +86,6 @@
             </div>
         </section>
         <!-- //사전 등록 section -->
-
 
         <section data-anchor="secondPage" class="section fp-auto-height introduce_section">
             <div class="introduce_content">
@@ -188,20 +187,34 @@
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.wrap').fullpage({
-                autoScrolling: true,
-                scrollingSpeed: 500,
-                scrollBar: true,
-                fitToSection :false,
-                menu: true,
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-	            menu: '#fix_menu',
-                css3: true,
-                scrollOverflowReset:true,
-            });
-            $('.btn_store').click(function() {
-                $('.layer_select').toggle();
-            });
+            if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+                $('.wrap').fullpage({
+                    autoScrolling : false,
+                    scrollingSpeed: 500,
+                    scrollBar: true,
+                    fitToSection :false,
+                    menu: true,
+                    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+    	            menu: '#fix_menu',
+                    css3: true,
+                    scrollOverflowReset:true,
+                });
+            } else{
+                $('.wrap').fullpage({
+                    autoScrolling: true,
+                    scrollingSpeed: 500,
+                    scrollBar: true,
+                    fitToSection :false,
+                    menu: true,
+                    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+    	            menu: '#fix_menu',
+                    css3: true,
+                    scrollOverflowReset:true,
+                });
+            }
+        });
+        $('.btn_store').click(function() {
+            $('.layer_select').toggle();
         });
     </script>
 

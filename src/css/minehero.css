@@ -101,6 +101,7 @@ strong, h1, h2, h3, h4, h5 {
 
 /* onepage-scroll */
 section {
+  overflow: hidden;
   display: table;
   width: 100%;
   min-width: 1284px;
@@ -627,6 +628,144 @@ section {
 .pop_content.type3 .link_cafe {
   top: 415px;
   left: 111px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  section {
+    min-width: 100%;
+    -webkit-text-size-adjust: auto;
+  }
+  .fix_menu {
+    height: 64px;
+    background-size: 1px 64px;
+  }
+  .fix_menu ul {
+    padding-left: 5px;
+  }
+  .fix_menu li {
+    margin-right: 3px;
+  }
+  .fix_menu li a {
+    zoom: 0.3;
+  }
+  .fix_menu .link_cafe {
+    top: 50px;
+    left: auto;
+    right: 5px;
+    margin-left: 0;
+    zoom: 0.3;
+  }
+  .spot_section .spot_content {
+    width: 320px;
+    height: 518px;
+  }
+  .spot_section .area_title {
+    width: 300px;
+    height: 119px;
+    margin-top: 100px;
+    background-size: 300px 119px;
+  }
+  .spot_section .area_video {
+    width: 300px;
+    height: 172px;
+    background-size: 300px 172px;
+  }
+  .spot_section .area_video .btn_play {
+    top: 52px;
+    left: 123px;
+    width: 46.5px;
+    height: 46.5px;
+    background: url(../img/sp_minehero.png) no-repeat 0 -103.5px;
+    background-size: 550px 200px;
+  }
+  .spot_section .area_select {
+    top: 790px;
+    left: 19px;
+    zoom: 0.5;
+  }
+  .spot_section .area_input {
+    top: 790px;
+    left: 200px;
+    zoom: 0.5;
+  }
+  .spot_section .area_agreement {
+    top: 874px;
+    left: 64px;
+    white-space: nowrap;
+    zoom: 0.5;
+  }
+  .spot_section .area_agreement .agreement_detail {
+    top: 2px;
+  }
+  .spot_section .area_button {
+    top: 932px;
+    left: 84px;
+    white-space: nowrap;
+    zoom: 0.5;
+  }
+  .spot_section .area_button .btn_registration {
+    margin-right: 20px;
+  }
+  .spot_section .area_button .sns_facebook {
+    margin-right: 10px;
+  }
+  .introduce_section .introduce_content {
+    width: 320px;
+    height: 518px;
+  }
+  .introduce_section .area_title {
+    width: 180px;
+    height: 71.5px;
+    margin-top: 50px;
+    background-size: 180px 71.5px;
+  }
+  .introduce_section .area_content {
+    margin-top: 120px;
+    zoom: 0.35;
+  }
+  .introduce_section .area_content li {
+    margin-bottom: 60px;
+  }
+  .event_section .event_content {
+    width: 320px;
+    height: 790px;
+  }
+  .event_section .area_title {
+    width: 285px;
+    height: 72px;
+    margin-top: 50px;
+    background-size: 285px 72px;
+  }
+  .event_section .area_content {
+    margin-top: 35px;
+    padding: 0;
+  }
+  .event_section .area_content ul .info {
+    float: none;
+    margin: 0 auto 90px;
+    zoom: 0.4;
+  }
+  .event_section .area_content ul .info2 {
+    float: none;
+    margin: 0 auto;
+    zoom: 0.5;
+  }
+  .event_section .area_content .link_cafe {
+    width: 300px;
+    height: 34px;
+    background-size: 300px 34px;
+  }
+  .address_section address {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+  }
+  .pop_content {
+    zoom: 0.5;
+  }
+  .pop_content.type2 {
+    zoom: 0.4;
+  }
 }
 
 /*# sourceMappingURL=maps/minehero.css.map */
