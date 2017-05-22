@@ -644,13 +644,13 @@ section {
   .fix_menu ul {
     display: inline-block;
     width: auto;
-    padding-left: 5px;
+    padding-left: 0;
     vertical-align: middle;
   }
   .fix_menu li {
     float: none;
     display: inline-block;
-    margin-right: 3px;
+    margin-right: 0;
   }
   .fix_menu li a {
     zoom: 0.3;
