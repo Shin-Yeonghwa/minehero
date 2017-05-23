@@ -31,7 +31,6 @@ section{
     overflow:hidden;
     display:table;
     width:100%;
-    min-width:1284px;
     table-layout:fixed;
     @include mx-box-sizing;
 }
@@ -44,6 +43,9 @@ section{
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
+}
+section{
+    min-width:1024px;
 }
 /* 상단 GNB */
 .fix_menu{
@@ -104,18 +106,13 @@ section{
             @include mx-bg(-809px,0);
         }
         .layer{
-            display:none;
-        }
-        &:hover{
-            .layer{
-                position:absolute;
-                display:block;
-                top:62px;
-                left:11px;
-                width:258px;
-                height:128px;
-                @include mx-bg(-809px,-100px);
-            }
+            position:absolute;
+            display:block;
+            top:62px;
+            left:11px;
+            width:258px;
+            height:128px;
+            @include mx-bg(-809px,-100px);
         }
     }
 
@@ -127,19 +124,14 @@ section{
     height:1037px;
     background:url(../img/bg_sopt.jpg) no-repeat 50% 0%;
     background-size:cover;
-    .spot_content{
-        position:relative;
-        width:1284px;
-        height:1037px;
-        margin:0 auto;
-        text-align:center;
-    }
+    text-align:center;
     .area_title{
         display:inline-block;
-        width:733px;
-        height:251px;
+        width:38.17%;
+        height:21.18%;
         margin-top:154px;
-        background:url(../img/bg_spot_title.png) no-repeat;
+        background:url(../img/bg_spot_title.png) no-repeat 50% 0;
+        background-size:contain;
     }
     .area_video{
         position:relative;
@@ -155,11 +147,17 @@ section{
             height:93px;
             @include mx-bg(0,-207px);
         }
+        .youtubeVideo{
+            width: 605px;
+            height: 347px;
+            position:absolute;
+            left:35px;
+        }
     }
     .area_select{
-        position:absolute;
-        top:777px;
-        left:336px;
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
         z-index:10;
         .btn_store{
             overflow:hidden;
@@ -241,14 +239,13 @@ section{
         }
     }
     .area_input{
-        position:absolute;
-        top:777px;
-        left:517px;
+        display:inline-block;
         width:425px;
         height:67px;
         padding:9px 12px 9px 9px;
         @include mx-box-sizing;
         @include mx-bg(-380px,-208px);
+        vertical-align:middle;
         .inp_phone{
             width:100%;
             height:46px;
@@ -265,9 +262,8 @@ section{
         }
     }
     .area_agreement{
-        position:absolute;
-        top:853px;
-        left:397px;
+        display:block;
+        margin:10px 0 20px;
         .chck_agreement{
             display:inline-block;
             width:27px;
@@ -291,12 +287,10 @@ section{
             cursor:pointer;
         }
         .agreement_detail{
-            overflow:hidden;
-            position:absolute;
-            top:-3px;
-            right:-195px;
+            display:inline-block;
             width:126px;
             height:32px;
+            margin-left:40px;
             @include mx-bg(-878px,-231px);
             white-space:nowrap;
             color:transparent;
@@ -305,9 +299,7 @@ section{
         }
     }
     .area_button{
-        position:absolute;
-        top:892px;
-        left:422px;
+        display:block;
         .btn_registration{
             display:inline-block;
             width:310px;
@@ -337,37 +329,33 @@ section{
     height:1037px;
     background:url(../img/bg_introduce.jpg) no-repeat 50% 0%;
     background-size:cover;
-    .introduce_content{
-        position:relative;
-        width:1284px;
-        height:1037px;
-        margin:0 auto;
-        text-align:center;
-    }
+    text-align:center;
     .area_title{
         display:inline-block;
-        width:360px;
-        height:143px;
+        width:18.75%;
+        height:13.77%;
         margin-top:153px;
-        background:url(../img/bg_introduce_title.png) no-repeat;
+        background:url(../img/bg_introduce_title.png) no-repeat 50%;
+        background-size:contain;
     }
     .area_content{
         margin-top:26px;
-        text-align:center;
         li{
-            display:inline-block;
-            width:842px;
-            height:218px;
-            margin-bottom:9px;
-            background:url(../img/sp_introduceinfo.png) no-repeat;
+            display:block;
+            width:43.80%;
+            padding-top:12.30%;
+            margin:0 auto 9px;
             &.info{
-                background-position:0 0;
+                background:url(../img/sp_introduceinfo.png) no-repeat 50% 0;
+                background-size:contain;
             }
             &.info2{
-                background-position:0 -230px;
+                background:url(../img/sp_introduceinfo2.png) no-repeat 50% 0;
+                background-size:contain;
             }
             &.info3{
-                background-position:0 -460px;
+                background:url(../img/sp_introduceinfo3.png) no-repeat 50% 0;
+                background-size:contain;
             }
         }
     }
@@ -379,47 +367,45 @@ section{
     height:1040px;
     background:url(../img/bg_event.jpg) no-repeat 50% 0%;
     background-size:cover;
-    .event_content{
-        position:relative;
-        width:1284px;
-        height:1040px;
-        margin:0 auto;
-        text-align:center;
-    }
+    text-align:center;
     .area_title{
         display:inline-block;
-        width:569px;
-        height:144px;
+        width:29.63%;
+        height:13.87%;
         margin-top:168px;
-        background:url(../img/bg_event_title.png) no-repeat;
+        background:url(../img/bg_event_title.png) no-repeat 50%;
+        background-size:contain;
     }
     .area_content{
-        margin-top:45px;
+        margin-top:15px;
         padding:0 0 0 15px;
         ul{
             overflow:hidden;
             li{
-                float:left;
+                display:inline-block;
             }
             .info{
-                width:708px;
-                height:518px;
+                width:46.87%;
+                padding-top:28.90%;
                 margin-right:36px;
-                background:url(../img/bg_eventinfo.png) no-repeat;
+                background:url(../img/bg_eventinfo.png) no-repeat 50% 0;
+                background-size:contain;
             }
             .info2{
-                width:508px;
-                height:522px;
-                background:url(../img/bg_eventinfo2.png) no-repeat;
+                width:36.45%;
+                padding-top:29.28%;
+                background:url(../img/bg_eventinfo2.png) no-repeat 50% 0;
+                background-size:contain;
             }
         }
         .link_cafe{
             overflow:hidden;
             display:inline-block;
-            width:691px;
-            height:78px;
-            margin-top:43px;
-            background:url(../img/bg_link_cafe.png) no-repeat;
+            width:35.98%;
+            margin-top:30px;
+            padding-top:3.8%;
+            background:url(../img/bg_link_cafe.png) no-repeat 50% 0;
+            background-size:contain;
             color:transparent;
             white-space:nowrap;
         }
@@ -428,6 +414,7 @@ section{
 .address_section{
     width:100%;
     height:85px;
+    min-height:0;
     background-color:#142125;
     address{
         height:85px;
@@ -492,9 +479,11 @@ section{
         }
     }
 }
+
 @media only screen and(max-device-width:1024px){
     section{
         min-width:100%;
+        min-height:568px;
         -webkit-text-size-adjust:auto;
     }
     .fix_menu{
@@ -526,6 +515,7 @@ section{
             vertical-align:middle;
         }
     }
+
     .spot_section .spot_content{
         width:320px;
         height:518px;
@@ -541,6 +531,12 @@ section{
         height:172px;
         background-size:300px 172px;
     }
+    .spot_section .area_video .youtubeVideo{
+   	    width: 266px;
+        height: 157px;
+        position: absolute;
+        left: 15px;
+    }
     .spot_section .area_video .btn_play{
         top:52px;
         left:123px;
@@ -550,13 +546,9 @@ section{
         background-size:550px 200px;
     }
     .spot_section .area_select{
-        top:790px;
-        left:19px;
         zoom: 0.5;
     }
     .spot_section .area_input{
-        top:790px;
-        left:200px;
         zoom: 0.5;
     }
     .spot_section .area_agreement{
@@ -591,11 +583,11 @@ section{
         background-size:180px 71.5px;
     }
     .introduce_section .area_content{
-        margin-top:120px;
-        zoom:0.35;
+
     }
     .introduce_section .area_content li{
-        margin-bottom:60px;
+        width:90%;
+        padding-top:30%;
     }
     .event_section .event_content{
         width:320px;
@@ -612,18 +604,23 @@ section{
         padding:0;
     }
     .event_section .area_content ul .info{
-        float:none;
-        margin:0 auto 90px;
-        zoom:0.4;
+        display:block;
+        width:90%;
+        padding-top:50%;
+        margin:0 auto 20px;
+
     }
     .event_section .area_content ul .info2{
-        float:none;
+        display:block;
+        width:90%;
+        padding-top:50%;
         margin:0 auto;
-        zoom:0.5;
+
     }
     .event_section .area_content .link_cafe{
         width:300px;
         height:34px;
+        padding-top:0;
         background-size:300px 34px;
     }
     .address_section address{
